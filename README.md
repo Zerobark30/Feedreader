@@ -1,3 +1,14 @@
+Instructions:
+To run this program, simply open the index file in any normal browser. It should
+display both the website and the tests from the spec file (all passing now).
+If you'd like to add more tests, simply go to feedreader.js in the spec directory
+and follow the jasmine framework for creating tests.
+
+Sources:
+http://jasmine.github.io/, Jasmine documentation
+https://discussions.udacity.com/c/nd001-2014-12-03, Udacity discussion board
+
+
 # Project Overview
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.

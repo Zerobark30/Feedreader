@@ -26,26 +26,26 @@ $(function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
-		
+
 		//test that each element has a name and a URL
         it('has name', function() {
             for (feed in allFeeds) {
                 expect(allFeeds[feed].name).toBeDefined();
                 expect(allFeeds[feed].name).not.toBe(null);
                 expect(allFeeds[feed].url).toBeDefined();
-                expect(allFeeds[feed].url).not.toBe(null);                
+                expect(allFeeds[feed].url).not.toBe(null);
             }
         });
     });
-	
-	
+
+
     describe('The menu', function() {
         var bodyClass = $('body').hasClass('menu-hidden');
-		
+
 		//make sure the menu starts as hidden
         it ('hidden menu', function() {
-            
-            bodyClass = $('body').hasClass('menu-hidden');            
+
+            bodyClass = $('body').hasClass('menu-hidden');
 
             expect(bodyClass).toBe(true);
         });
@@ -53,7 +53,7 @@ $(function() {
 		//make sure the menu shows on first click
         it ('menu shows on first click', function() {
             $('.menu-icon-link').trigger('click');
-            bodyClass = $('body').hasClass('menu-hidden');            
+            bodyClass = $('body').hasClass('menu-hidden');
 
             expect(bodyClass).toBe(false);
         });
@@ -61,15 +61,15 @@ $(function() {
 		//make sure the menu hides on the second click
         it ('menu hides on second click', function() {
             $('.menu-icon-link').trigger('click');
-            bodyClass = $('body').hasClass('menu-hidden');            
+            bodyClass = $('body').hasClass('menu-hidden');
 
             expect(bodyClass).toBe(true);
-        }); 
+        });
 
     });
-	
+
     describe('Initial Entries',function() {
-		
+
 		//function to make sure test occurs even though function is async
         beforeEach(function(done) {
                 loadFeed(0, done);
@@ -96,7 +96,7 @@ $(function() {
                 });
             });
         });
-        
+
 		//make sure the content actually changes
         it('loadFeed changes content', function(done) {
             expect($('.feed .entry h2').html()).not.toBe(feedTitle);
